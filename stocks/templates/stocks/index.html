@@ -1,114 +1,9 @@
+{% extends "stocks/base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>TradeLens</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'stocks/vendor/bootstrap/css/bootstrap.min.css'  %}" rel="stylesheet">
-  <link href="{% static 'stocks/vendor/bootstrap-icons/bootstrap-icons.css'  %}" rel="stylesheet">
-  <link href="{% static 'stocks/vendor/aos/aos.css" rel="stylesheet'  %}">
-  <link href="{% static 'stocks/vendor/glightbox/css/glightbox.min.css'  %}" rel="stylesheet">
-  <link href="{% static 'stocks/vendor/swiper/swiper-bundle.min.css'  %}" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="{% static 'stocks/css/main.css'  %}" rel="stylesheet">
-  <link href="{% static 'stocks/css/custom.css'  %}" rel="stylesheet">
-
-  
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{% static 'stocks/img/logo.png'  %}" alt="Trading app">
-        <h1 class="sitename">TradeLens</h1>
-      </a>
-
-      <!-- <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li class="listing-dropdown"><a href="#"><span>Listing Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li>
-                <a href="#">Column 1 link 1</a>
-                <a href="#">Column 1 link 2</a>
-                <a href="#">Column 1 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 2 link 1</a>
-                <a href="#">Column 2 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 3 link 1</a>
-                <a href="#">Column 3 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 4 link 1</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 5 link 1</a>
-                <a href="#">Column 5 link 2</a>
-                <a href="#">Column 5 link 3</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav> -->
-
-      <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
+    {% block content %}
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
@@ -118,7 +13,7 @@
             <h1 data-aos="fade-up">See the market clearly Trade with confidence.</h1>
             <p data-aos="fade-up" data-aos-delay="100">TradeLens helps traders understand price movements, plan safe trades and review trade performance</p>
             <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-              <a href="#about" class="btn-get-started">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="btn-get-started">Start Free Trial <i class="bi bi-arrow-right"></i></a>
               <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Demo</span></a>
             </div>
           </div>
@@ -153,9 +48,9 @@
                 <h3 class="post-title">Smart Chart Analysis</h3>
                 <p>Real-time price charts with essential indicators only — no clutter, no noise.</p>
 
-                <hr>
+                <!-- <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
 
               </div>
 
@@ -176,9 +71,9 @@
                 <h3 class="post-title">Easy Risk Calculator</h3>
                 <p>Know how much you’re risking before you buy. <br> <br> Plan position size, stop-loss and potential profit in seconds.</p>
 
-                <hr>
+                <!-- <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link px-3 pb-3"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="blog-details.html" class="readmore stretched-link px-3 pb-3"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
 
               </div>
 
@@ -197,9 +92,9 @@
                 <h3 class="post-title">Trade Journal</h3>
                 <p>Log your stock trades with notes like: <br> <br> Why you entered  <br> What you expected  <br> What actually happened</p>
 
-                <hr>
+                <!-- <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
 
               </div>
 
@@ -288,7 +183,7 @@
               <i class="bi bi-search icon"></i>
               <h3>Pick a stock</h3>
               <p>Choose a stock you’re watching.</p>
-              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -297,7 +192,7 @@
               <i class="bi bi-graph-up-arrow icon"></i>
               <h3>Analyze the Market</h3>
               <p>Use easy-to-read charts and indicators to spot trends and potential opportunities.</p>
-              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -306,7 +201,7 @@
               <i class="bi bi-calculator icon"></i>
               <h3>Plan your Trade</h3>
               <p>Set your entry price, risk level, and profit targets before placing any trade.</p>
-              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -315,7 +210,7 @@
               <i class="bi bi-lightning-charge icon"></i>
               <h3>Execute with Confidence</h3>
               <p>Place trades knowing exactly why you’re entering and when you should exit.</p>
-              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -324,7 +219,7 @@
               <i class="bi bi-clipboard-data icon"></i>
               <h3>Review performance</h3>
               <p>Analyze completed trades to see what worked and where you can improve.</p>
-              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -333,7 +228,7 @@
               <i class="bi bi-arrow-repeat icon"></i>
               <h3>Build Consistently</h3>
               <p>Build discipline, refine your strategy, and improve your results over time.</p>
-              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -352,7 +247,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="display-4 mb-4">Ready to Trade with Confidence?</h2>
             <p class="mb-4">Use real-time insights, smart risk tools, and clear charts to make better trading decisions—every single day.</p>
-            <a href="#" class="btn btn-cta">Start Free Today</a>
+            <a href="{% url 'open_tradingaccount' %}" class="btn btn-cta">Start Free Today</a>
           </div>
 
           <!-- Abstract Background Elements -->
@@ -427,7 +322,7 @@
                 <li>Educational trading resources</li>
                 <li>Community access</li>
               </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
+              <a href="{% url 'pricing' %}" class="btn-buy">Buy Now</a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -446,7 +341,7 @@
                 <li>Technical indicators</li>
                 <li>Email support</li>
               </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
+              <a href="{% url 'pricing' %}" class="btn-buy">Buy Now</a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -464,7 +359,7 @@
                 <li>Custom trading strategies</li>
                 <li>Priority support</li>
               </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
+              <a href="{% url 'pricing' %}" class="btn-buy">Buy Now</a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -482,7 +377,7 @@
                 <li>Institutional-grade data</li>
                 <li>Dedicated account support</li>
               </ul>
-              <a href="#" class="btn-buy">Buy Now</a>
+              <a href="{% url 'pricing' %}" class="btn-buy">Buy Now</a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -1064,100 +959,7 @@
       </div>
 
     </section><!-- /Contact Section -->
+    {% endblock %}
 
-  </main>
+  
 
-  <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">TradeLens</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Shammah Estate</p>
-            <p>Phase 3, Makurdi</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+234 9060361470</span></p>
-            <p><strong>Email:</strong> <span>aulemercy@gmail.com</span></p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Smart Market Analysis</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Risk & Trade Planning</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Trade Journaling</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Live Market Tracking</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Stay ahead of the market. Follow TradeLens for trading insights, risk management tips, and performance-driven tools.           
-          </p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">TradeLens</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">Mercy Dooshima</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="{% static 'stocks/vendor/bootstrap/js/bootstrap.bundle.min.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/php-email-form/validate.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/aos/aos.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/glightbox/js/glightbox.min.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/purecounter/purecounter_vanilla.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/imagesloaded/imagesloaded.pkgd.min.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/isotope-layout/isotope.pkgd.min.js'  %}"></script>
-  <script src="{% static 'stocks/vendor/swiper/swiper-bundle.min.js'  %}"></script>
-
-  <!-- Main JS File -->
-  <script src="{% static 'stocks/js/main.js'  %}"></script>
-
-</body>
-
-</html>
