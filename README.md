@@ -1,1 +1,1 @@
-This is a trading landing page
+TradeLens is a web-based trading analytics and journaling tool that helps traders track trades, analyze performance, and spot patterns without overwhelming dashboards.

@@ -11,10 +11,10 @@
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h1 data-aos="fade-up">See the market clearly Trade with confidence.</h1>
-            <p data-aos="fade-up" data-aos-delay="100">TradeLens helps traders understand price movements, plan safe trades and review trade performance</p>
+            <p data-aos="fade-up" data-aos-delay="100">TradeLens helps traders analyze price movements, plan safe trades and review trade performance</p>
             <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-              <a href="{% url 'open_tradingaccount' %}" class="btn-get-started">Start Free Trial <i class="bi bi-arrow-right"></i></a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Demo</span></a>
+              <a href="{% url 'start_analyzing' %}" class="btn-get-started">Start Analyzing Free<i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Demo</span></a>
             </div>
           </div>
           <!-- <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
@@ -183,7 +183,7 @@
               <i class="bi bi-search icon"></i>
               <h3>Pick a stock</h3>
               <p>Choose a stock you’re watching.</p>
-              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'start_analyzing' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -192,7 +192,7 @@
               <i class="bi bi-graph-up-arrow icon"></i>
               <h3>Analyze the Market</h3>
               <p>Use easy-to-read charts and indicators to spot trends and potential opportunities.</p>
-              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'start_analyzing' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -201,7 +201,7 @@
               <i class="bi bi-calculator icon"></i>
               <h3>Plan your Trade</h3>
               <p>Set your entry price, risk level, and profit targets before placing any trade.</p>
-              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'start_analyzing' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -210,7 +210,7 @@
               <i class="bi bi-lightning-charge icon"></i>
               <h3>Execute with Confidence</h3>
               <p>Place trades knowing exactly why you’re entering and when you should exit.</p>
-              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'start_analyzing' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -219,7 +219,7 @@
               <i class="bi bi-clipboard-data icon"></i>
               <h3>Review performance</h3>
               <p>Analyze completed trades to see what worked and where you can improve.</p>
-              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'start_analyzing' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -228,7 +228,7 @@
               <i class="bi bi-arrow-repeat icon"></i>
               <h3>Build Consistently</h3>
               <p>Build discipline, refine your strategy, and improve your results over time.</p>
-              <a href="{% url 'open_tradingaccount' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{% url 'start_analyzing' %}" class="read-more stretched-link"><span>Get Started</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -247,7 +247,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="display-4 mb-4">Ready to Trade with Confidence?</h2>
             <p class="mb-4">Use real-time insights, smart risk tools, and clear charts to make better trading decisions—every single day.</p>
-            <a href="{% url 'open_tradingaccount' %}" class="btn btn-cta">Start Free Today</a>
+            <a href="{% url 'start_analyzing' %}" class="btn btn-cta">Start Analyzing Free</a>
           </div>
 
           <!-- Abstract Background Elements -->
@@ -692,67 +692,6 @@
 
     </section><!-- /Team Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Clients</h2>
-        <p>We work with best clients<br></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-1.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-2.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-3.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-4.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-5.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-6.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-7.png'  %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'stocks/img/clients/client-8.png'  %}" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
 
     <!-- Recent Posts Section -->
      
@@ -792,7 +731,7 @@
 
                 <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="{% url 'blog_details' %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
               </div>
 
@@ -823,7 +762,7 @@
 
                 <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="{% url 'blog_details' %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
               </div>
 
@@ -854,7 +793,7 @@
 
                 <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="{% url 'blog_details' %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
               </div>
 
