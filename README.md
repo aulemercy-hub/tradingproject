@@ -1,4 +1,10 @@
 📊 TradeLens – Trading Analytics Landing Page
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Django](https://img.shields.io/badge/Django-4.x-green)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
+![Project](https://img.shields.io/badge/Type-Trading%20Analytics-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
 
 TradeLens is a modern trading analytics landing page built with Django and Bootstrap. It is designed to showcase a trading analytics platform that helps traders analyze markets, manage risk, and track performance with clarity and confidence.
 
